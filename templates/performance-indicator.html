@@ -1,0 +1,607 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row align-items-center">
+<div class="col">
+<h3 class="page-title">Performance Indicator</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+<li class="breadcrumb-item active">Performance</li>
+</ul>
+</div>
+<div class="col-auto float-end ms-auto">
+<a href="#" class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_indicator"><i class="fa fa-plus"></i> Add New</a>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="table-responsive">
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+<thead>
+<tr role="row"><th style="width: 30px;" class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">#</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Designation: activate to sort column ascending" style="width: 116.281px;">Designation</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 104.328px;">Department</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Added By: activate to sort column ascending" style="width: 170.047px;">Added By</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Create At: activate to sort column ascending" style="width: 90.5156px;">Create At</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 105.484px;">Status</th><th class="text-end sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 60.3438px;">Action</th></tr>
+</thead>
+<tbody>
+
+
+
+
+
+<tr class="odd">
+<td class="sorting_1">1</td>
+<td>Web Designer </td>
+<td>Designing</td>
+<td>
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
+<a href="profile.html">John Doe </a>
+</h2>
+</td>
+<td>
+7 May 2019
+</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-success"></i> Active
+</a>
+<div class="dropdown-menu" style="">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right" style="">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_indicator"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_indicator"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr><tr class="even">
+<td class="sorting_1">2</td>
+<td>IOS Developer </td>
+<td>IOS</td>
+<td>
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-05.jpg"></a>
+<a href="profile.html">Mike Litorus </a>
+</h2>
+</td>
+<td>
+7 May 2019
+</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-success"></i> Active
+</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_indicator"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_indicator"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr><tr class="odd">
+<td class="sorting_1">3</td>
+<td>Web Designer </td>
+<td>Designing</td>
+<td>
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-10.jpg"></a>
+<a href="profile.html">John Smith </a>
+</h2>
+</td>
+<td>
+7 May 2019
+</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-success"></i> Active
+</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_indicator"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_indicator"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr><tr class="even">
+<td class="sorting_1">4</td>
+<td>Web Designer </td>
+<td>Designing</td>
+<td>
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-12.jpg"></a>
+<a href="profile.html">Jeffrey Warden </a>
+</h2>
+</td>
+<td>
+7 May 2019
+</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-success"></i> Active
+</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_indicator"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_indicator"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr><tr class="odd">
+<td class="sorting_1">5</td>
+<td>Web Designer </td>
+<td>Designing</td>
+<td>
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-11.jpg"></a>
+<a href="profile.html">Wilmer Deluna </a>
+</h2>
+</td>
+<td>
+7 May 2019
+</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-success"></i> Active
+</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_indicator"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_indicator"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr></tbody>
+</table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="add_indicator" class="modal custom-modal fade" role="dialog">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Set New Indicator</h5>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label class="col-form-label">Designation</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-1-g833" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-3-w48k">Select Designation</option>
+<option>Web Designer</option>
+<option>IOS Developer</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-cu2k" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-9lp1-container" aria-controls="select2-9lp1-container"><span class="select2-selection__rendered" id="select2-9lp1-container" role="textbox" aria-readonly="true" title="Select Designation">Select Designation</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<h4 class="modal-sub-title">Technical</h4>
+<div class="form-group">
+<label class="col-form-label">Customer Experience</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-4-u69d" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-6-s2bl">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-66zk" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-u075-container" aria-controls="select2-u075-container"><span class="select2-selection__rendered" id="select2-u075-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Marketing</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-7-rz9t" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-9-mk77">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-8-dwxy" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-7fa4-container" aria-controls="select2-7fa4-container"><span class="select2-selection__rendered" id="select2-7fa4-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Management</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-10-mgt9" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-12-q2zo">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-11-ud3p" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-tfil-container" aria-controls="select2-tfil-container"><span class="select2-selection__rendered" id="select2-tfil-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Administration</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-13-oa4n" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-15-132o">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-14-jakm" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-er0u-container" aria-controls="select2-er0u-container"><span class="select2-selection__rendered" id="select2-er0u-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Presentation Skill</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-16-q1nb" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-18-zul6">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-17-nzql" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-tmqb-container" aria-controls="select2-tmqb-container"><span class="select2-selection__rendered" id="select2-tmqb-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Quality Of Work</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-19-sxrp" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-21-gbwo">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-20-kwib" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-832x-container" aria-controls="select2-832x-container"><span class="select2-selection__rendered" id="select2-832x-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Efficiency</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-22-fzop" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-24-i9ze">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-23-lexr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-xh9v-container" aria-controls="select2-xh9v-container"><span class="select2-selection__rendered" id="select2-xh9v-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<h4 class="modal-sub-title">Organizational</h4>
+<div class="form-group">
+<label class="col-form-label">Integrity</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-25-nfnv" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-27-67ul">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-26-8ywe" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-f7lm-container" aria-controls="select2-f7lm-container"><span class="select2-selection__rendered" id="select2-f7lm-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Professionalism</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-28-0sb2" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-30-44ek">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-29-sogr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-tzcr-container" aria-controls="select2-tzcr-container"><span class="select2-selection__rendered" id="select2-tzcr-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Team Work</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-31-d3z0" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-33-y0t6">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-32-niyf" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-fs4l-container" aria-controls="select2-fs4l-container"><span class="select2-selection__rendered" id="select2-fs4l-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Critical Thinking</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-34-9rx3" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-36-nd1y">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-35-auq8" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-jxqt-container" aria-controls="select2-jxqt-container"><span class="select2-selection__rendered" id="select2-jxqt-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Conflict Management</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-37-cnx9" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-39-qy2j">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-38-pjcm" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-0ya9-container" aria-controls="select2-0ya9-container"><span class="select2-selection__rendered" id="select2-0ya9-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Attendance</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-40-8lj5" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-42-9ric">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-41-wuir" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-sduf-container" aria-controls="select2-sduf-container"><span class="select2-selection__rendered" id="select2-sduf-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Ability To Meet Deadline</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-43-la8s" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-45-5dfy">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-44-i7tr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-ox2j-container" aria-controls="select2-ox2j-container"><span class="select2-selection__rendered" id="select2-ox2j-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+<label class="col-form-label">Status</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-46-2or9" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-48-tn35">Active</option>
+<option>Inactive</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-47-0uq6" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-7lmx-container" aria-controls="select2-7lmx-container"><span class="select2-selection__rendered" id="select2-7lmx-container" role="textbox" aria-readonly="true" title="Active">Active</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+</div>
+<div class="submit-section">
+<button class="btn btn-primary submit-btn">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="edit_indicator" class="modal custom-modal fade" role="dialog">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Edit Performance Indicator</h5>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label class="col-form-label">Designation</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-49-3qwm" tabindex="-1" aria-hidden="true">
+<option>Select Designation</option>
+<option selected="" data-select2-id="select2-data-51-n6i2">Web Designer</option>
+<option>IOS Developer</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-50-96m5" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-03el-container" aria-controls="select2-03el-container"><span class="select2-selection__rendered" id="select2-03el-container" role="textbox" aria-readonly="true" title="Web Designer">Web Designer</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<h4 class="modal-sub-title">Technical</h4>
+<div class="form-group">
+<label class="col-form-label">Customer Experience</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-52-aiql" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option selected="" data-select2-id="select2-data-54-h1r2">Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-53-lxh3" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-pmbh-container" aria-controls="select2-pmbh-container"><span class="select2-selection__rendered" id="select2-pmbh-container" role="textbox" aria-readonly="true" title="Advanced">Advanced</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Marketing</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-55-uj7q" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option selected="" data-select2-id="select2-data-57-rjj9">Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-56-lups" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-6tcd-container" aria-controls="select2-6tcd-container"><span class="select2-selection__rendered" id="select2-6tcd-container" role="textbox" aria-readonly="true" title="Expert / Leader">Expert / Leader</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Management</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-58-fne7" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option selected="" data-select2-id="select2-data-60-t4m3">Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-59-v01m" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-s2lg-container" aria-controls="select2-s2lg-container"><span class="select2-selection__rendered" id="select2-s2lg-container" role="textbox" aria-readonly="true" title="Intermediate">Intermediate</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Administration</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-61-qque" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option selected="" data-select2-id="select2-data-63-cdm9">Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-62-r1vt" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-7tow-container" aria-controls="select2-7tow-container"><span class="select2-selection__rendered" id="select2-7tow-container" role="textbox" aria-readonly="true" title="Advanced">Advanced</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Presentation Skill</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-64-2ini" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-66-f7ur">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-65-26jo" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-hbhi-container" aria-controls="select2-hbhi-container"><span class="select2-selection__rendered" id="select2-hbhi-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Quality Of Work</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-67-1qm4" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-69-313s">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-68-8yj8" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-5ld4-container" aria-controls="select2-5ld4-container"><span class="select2-selection__rendered" id="select2-5ld4-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Efficiency</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-70-2sxm" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-72-uunx">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-71-3d0h" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-93ut-container" aria-controls="select2-93ut-container"><span class="select2-selection__rendered" id="select2-93ut-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<h4 class="modal-sub-title">Organizational</h4>
+<div class="form-group">
+<label class="col-form-label">Integrity</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-73-t7gq" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-75-ep5w">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-74-tgw4" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-t7wf-container" aria-controls="select2-t7wf-container"><span class="select2-selection__rendered" id="select2-t7wf-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Professionalism</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-76-hc13" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option selected="" data-select2-id="select2-data-78-jp16">Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-77-0zpm" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-eq7o-container" aria-controls="select2-eq7o-container"><span class="select2-selection__rendered" id="select2-eq7o-container" role="textbox" aria-readonly="true" title="Intermediate">Intermediate</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Team Work</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-79-hlwy" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-81-z5xa">None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-80-zyyj" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-knng-container" aria-controls="select2-knng-container"><span class="select2-selection__rendered" id="select2-knng-container" role="textbox" aria-readonly="true" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Critical Thinking</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-82-m8fr" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option selected="" data-select2-id="select2-data-84-u6vt">Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-83-13a2" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-itph-container" aria-controls="select2-itph-container"><span class="select2-selection__rendered" id="select2-itph-container" role="textbox" aria-readonly="true" title="Advanced">Advanced</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Conflict Management</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-85-01jx" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option selected="" data-select2-id="select2-data-87-9rm4">Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-86-0gy7" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-bsa3-container" aria-controls="select2-bsa3-container"><span class="select2-selection__rendered" id="select2-bsa3-container" role="textbox" aria-readonly="true" title="Advanced">Advanced</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Attendance</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-88-dxn7" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option selected="" data-select2-id="select2-data-90-ps1j">Intermediate</option>
+<option>Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-89-658h" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-7z7c-container" aria-controls="select2-7z7c-container"><span class="select2-selection__rendered" id="select2-7z7c-container" role="textbox" aria-readonly="true" title="Intermediate">Intermediate</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+<div class="form-group">
+<label class="col-form-label">Ability To Meet Deadline</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-91-3bsc" tabindex="-1" aria-hidden="true">
+<option>None</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option selected="" data-select2-id="select2-data-93-qvek">Advanced</option>
+<option>Expert / Leader</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-92-7826" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-yjn0-container" aria-controls="select2-yjn0-container"><span class="select2-selection__rendered" id="select2-yjn0-container" role="textbox" aria-readonly="true" title="Advanced">Advanced</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+<label class="col-form-label">Status</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-94-9pdn" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-96-os3g">Active</option>
+<option>Inactive</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-95-h18p" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-24cu-container" aria-controls="select2-24cu-container"><span class="select2-selection__rendered" id="select2-24cu-container" role="textbox" aria-readonly="true" title="Active">Active</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+</div>
+<div class="submit-section">
+<button class="btn btn-primary submit-btn">Save</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal custom-modal fade" id="delete_indicator" role="dialog">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-body">
+<div class="form-header">
+<h3>Delete Performance Indicator List</h3>
+<p>Are you sure want to delete?</p>
+</div>
+<div class="modal-btn delete-action">
+<div class="row">
+<div class="col-6">
+<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+</div>
+<div class="col-6">
+<a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{%endblock%}

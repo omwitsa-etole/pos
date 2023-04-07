@@ -1,0 +1,202 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row">
+<div class="col-sm-12">
+<h3 class="page-title">Create Estimate</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+<li class="breadcrumb-item active">Create Estimate</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<form>
+<div class="row">
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Client <span class="text-danger">*</span></label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-1-ktvu" tabindex="-1" aria-hidden="true">
+<option>Please Select</option>
+<option selected="" data-select2-id="select2-data-3-nov7">Barry Cuda</option>
+<option>Tressa Wexler</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-wxil" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-8fve-container" aria-controls="select2-8fve-container"><span class="select2-selection__rendered" id="select2-8fve-container" role="textbox" aria-readonly="true" title="Barry Cuda">Barry Cuda</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Project <span class="text-danger">*</span></label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-4-7ak3" tabindex="-1" aria-hidden="true">
+<option>Select Project</option>
+<option selected="" data-select2-id="select2-data-6-hlwu">Office Management</option>
+<option>Project Management</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-4gof" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-7iue-container" aria-controls="select2-7iue-container"><span class="select2-selection__rendered" id="select2-7iue-container" role="textbox" aria-readonly="true" title="Office Management">Office Management</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Email</label>
+<input class="form-control" type="email">
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Tax</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-7-c6fi" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-9-mzmi">Select Tax</option>
+<option>VAT</option>
+<option>GST</option>
+<option>No Tax</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-8-rp8d" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-r37i-container" aria-controls="select2-r37i-container"><span class="select2-selection__rendered" id="select2-r37i-container" role="textbox" aria-readonly="true" title="Select Tax">Select Tax</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Client Address</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Billing Address</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Estimate Date <span class="text-danger">*</span></label>
+<div class="cal-icon">
+<input class="form-control datetimepicker" type="text">
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group">
+<label>Expiry Date <span class="text-danger">*</span></label>
+<div class="cal-icon">
+<input class="form-control datetimepicker" type="text">
+</div>
+</div>
+</div>
+ </div>
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="table-responsive">
+<table class="table table-hover table-white">
+<thead>
+<tr>
+<th style="width: 20px">#</th>
+<th class="col-sm-2">Item</th>
+<th class="col-md-6">Description</th>
+<th style="width:100px;">Unit Cost</th>
+<th style="width:80px;">Qty</th>
+<th>Amount</th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>
+<input class="form-control" type="text" style="min-width:150px">
+</td>
+<td>
+<input class="form-control" type="text" style="min-width:150px">
+</td>
+<td>
+<input class="form-control" style="width:100px" type="text">
+</td>
+<td>
+<input class="form-control" style="width:80px" type="text">
+</td>
+<td>
+<input class="form-control" readonly="" style="width:120px" type="text">
+</td>
+<td><a href="javascript:void(0)" class="text-success font-18" title="Add"><i class="fa fa-plus"></i></a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>
+<input class="form-control" type="text" style="min-width:150px">
+</td>
+<td>
+<input class="form-control" type="text" style="min-width:150px">
+</td>
+<td>
+<input class="form-control" style="width:100px" type="text">
+</td>
+<td>
+<input class="form-control" style="width:80px" type="text">
+</td>
+<td>
+<input class="form-control" readonly="" style="width:120px" type="text">
+</td>
+<td><a href="javascript:void(0)" class="text-danger font-18" title="Remove"><i class="fa fa-trash-o"></i></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-responsive">
+<table class="table table-hover table-white">
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="text-end">Total</td>
+<td style="text-align: right; padding-right: 30px;width: 230px">0</td>
+</tr>
+<tr>
+<td colspan="5" class="text-end">Tax</td>
+<td style="text-align: right; padding-right: 30px;width: 230px">
+<input class="form-control text-end" value="0" readonly="" type="text">
+</td>
+</tr>
+<tr>
+<td colspan="5" class="text-end">
+Discount %
+</td>
+<td style="text-align: right; padding-right: 30px;width: 230px">
+<input class="form-control text-end" type="text">
+</td>
+</tr>
+<tr>
+<td colspan="5" style="text-align: right; font-weight: bold">
+Grand Total
+</td>
+<td style="text-align: right; padding-right: 30px; font-weight: bold; font-size: 16px;width: 230px">
+$ 0.00
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label>Other Information</label>
+<textarea class="form-control" rows="4"></textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="submit-section">
+<button class="btn btn-primary submit-btn m-r-10">Save &amp; Send</button>
+<button class="btn btn-primary submit-btn">Save</button>
+</div>
+  </form>
+</div>
+</div>
+</div>
+
+{%endblock%}

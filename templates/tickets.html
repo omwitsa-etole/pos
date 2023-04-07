@@ -1,0 +1,542 @@
+{%extends 'index.html'%}
+
+{%block content%}
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row align-items-center">
+<div class="col">
+<h3 class="page-title">Tickets</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+<li class="breadcrumb-item active">Tickets</li>
+</ul>
+</div>
+<div class="col-auto float-end ms-auto">
+<a href="#" class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_ticket"><i class="fa fa-plus"></i> Add Ticket</a>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="card-group m-b-30">
+<div class="card">
+<div class="card-body">
+<div class="d-flex justify-content-between mb-3">
+<div>
+<span class="d-block">New Tickets</span>
+</div>
+<div>
+<span class="text-success">+10%</span>
+</div>
+</div>
+<h3 class="mb-3">112</h3>
+<div class="progress mb-2" style="height: 5px;">
+<div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<div class="d-flex justify-content-between mb-3">
+<div>
+<span class="d-block">Solved Tickets</span>
+</div>
+<div>
+<span class="text-success">+12.5%</span>
+</div>
+</div>
+<h3 class="mb-3">70</h3>
+<div class="progress mb-2" style="height: 5px;">
+<div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<div class="d-flex justify-content-between mb-3">
+<div>
+<span class="d-block">Open Tickets</span>
+</div>
+<div>
+<span class="text-danger">-2.8%</span>
+</div>
+</div>
+<h3 class="mb-3">100</h3>
+<div class="progress mb-2" style="height: 5px;">
+<div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<div class="d-flex justify-content-between mb-3">
+<div>
+<span class="d-block">Pending Tickets</span>
+</div>
+<div>
+<span class="text-danger">-75%</span>
+</div>
+</div>
+<h3 class="mb-3">125</h3>
+<div class="progress mb-2" style="height: 5px;">
+<div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row filter-row">
+<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+<div class="form-group form-focus">
+<input type="text" class="form-control floating">
+<label class="focus-label">Employee Name</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+<div class="form-group form-focus select-focus focused">
+<select class="select floating select2-hidden-accessible" data-select2-id="select2-data-1-t0km" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-3-4cqc"> -- Select -- </option>
+<option> Pending </option>
+<option> Approved </option>
+<option> Returned </option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-qbbt" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-j787-container" aria-controls="select2-j787-container"><span class="select2-selection__rendered" id="select2-j787-container" role="textbox" aria-readonly="true" title=" -- Select -- "> -- Select -- </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+<label class="focus-label">Status</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+<div class="form-group form-focus select-focus focused">
+<select class="select floating select2-hidden-accessible" data-select2-id="select2-data-4-i9nj" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-6-xlgb"> -- Select -- </option>
+<option> High </option>
+<option> Low </option>
+<option> Medium </option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-yqkc" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-6op4-container" aria-controls="select2-6op4-container"><span class="select2-selection__rendered" id="select2-6op4-container" role="textbox" aria-readonly="true" title=" -- Select -- "> -- Select -- </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+<label class="focus-label">Priority</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+<div class="form-group form-focus">
+<div class="cal-icon">
+<input class="form-control floating datetimepicker" type="text">
+</div>
+<label class="focus-label">From</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+<div class="form-group form-focus">
+<div class="cal-icon">
+<input class="form-control floating datetimepicker" type="text">
+</div>
+<label class="focus-label">To</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+<a href="#" class="btn btn-success w-100"> Search </a>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="table-responsive">
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+<thead>
+<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending" style="width: 11.1719px;">#</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Ticket Id: activate to sort column ascending" style="width: 74.0781px;">Ticket Id</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Ticket Subject: activate to sort column ascending" style="width: 102.406px;">Ticket Subject</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Assigned Staff: activate to sort column ascending" style="width: 158.422px;">Assigned Staff</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 134.969px;">Created Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Last Reply: activate to sort column ascending" style="width: 128.125px;">Last Reply</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Priority: activate to sort column ascending" style="width: 99.0938px;">Priority</th><th class="text-center sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 110.125px;">Status</th><th class="text-end sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 54.125px;">Actions</th></tr>
+</thead>
+<tbody>
+
+
+<tr class="odd">
+<td class="sorting_1">1</td>
+<td><a href="ticket-view.html">#TKT-0001</a></td>
+<td>Laptop Issue</td>
+<td>
+<h2 class="table-avatar">
+<a class="avatar avatar-xs" href="profile.html"><img alt="" src="assets/img/profiles/avatar-10.jpg"></a>
+<a href="#">John Smith</a>
+</h2>
+</td>
+<td>5 Jan 2019 07:21 AM</td>
+<td>5 Jan 2019 11.12 AM</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> High </a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> High</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-warning"></i> Medium</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Low</a>
+</div>
+</div>
+</td>
+<td class="text-center">
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-danger"></i> New
+</a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Open</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Reopened</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> On Hold</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Closed</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> In Progress</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Cancelled</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_ticket"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_ticket"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr><tr class="even">
+<td class="sorting_1">2</td>
+<td><a href="ticket-view.html">#TKT-0001</a></td>
+<td>Internet Issue</td>
+<td>
+<h2 class="table-avatar">
+<a class="avatar avatar-xs" href="profile.html"><img alt="" src="assets/img/profiles/avatar-08.jpg"></a>
+<a href="#">Catherine Manseau</a>
+</h2>
+</td>
+<td>5 Jan 2019 07:21 AM</td>
+<td>5 Jan 2019 11.12 AM</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-warning"></i> Medium </a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> High</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-warning"></i> Medium</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Low</a>
+</div>
+</div>
+</td>
+<td class="text-center">
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-info"></i> Reopened
+</a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Open</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Reopened</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> On Hold</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Closed</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> In Progress</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Cancelled</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_ticket"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_ticket"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr></tbody>
+</table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="add_ticket" class="modal custom-modal fade" role="dialog">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Add Ticket</h5>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Ticket Subject</label>
+<input class="form-control" type="text">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Ticket Id</label>
+<input class="form-control" type="text">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Assign Staff</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-7-1p4x" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-9-j97s">-</option>
+<option>Mike Litorus</option>
+<option>John Smith</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-8-alg1" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-jhpf-container" aria-controls="select2-jhpf-container"><span class="select2-selection__rendered" id="select2-jhpf-container" role="textbox" aria-readonly="true" title="-">-</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Client</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-10-qs3h" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-12-ud2o">-</option>
+<option>Delta Infotech</option>
+<option>International Software Inc</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-11-0xc3" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-qinw-container" aria-controls="select2-qinw-container"><span class="select2-selection__rendered" id="select2-qinw-container" role="textbox" aria-readonly="true" title="-">-</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Priority</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-13-qjww" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-15-2vq0">High</option>
+<option>Medium</option>
+<option>Low</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-14-fn92" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-hkpw-container" aria-controls="select2-hkpw-container"><span class="select2-selection__rendered" id="select2-hkpw-container" role="textbox" aria-readonly="true" title="High">High</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>CC</label>
+<input class="form-control" type="text">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Assign</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Ticket Assignee</label>
+<div class="project-members">
+<a title="" data-placement="top" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="John Smith">
+<img src="assets/img/profiles/avatar-02.jpg" alt="">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Add Followers</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<div class="col-sm-6">
+ <div class="form-group">
+ <label>Ticket Followers</label>
+<div class="project-members">
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="Richard Miles">
+<img src="assets/img/profiles/avatar-09.jpg" alt="">
+</a>
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="John Smith">
+<img src="assets/img/profiles/avatar-10.jpg" alt="">
+</a>
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="Mike Litorus">
+<img src="assets/img/profiles/avatar-05.jpg" alt="">
+</a>
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="Wilmer Deluna">
+<img src="assets/img/profiles/avatar-11.jpg" alt="">
+</a>
+<span class="all-team">+2</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label>Description</label>
+<textarea class="form-control"></textarea>
+</div>
+<div class="form-group">
+<label>Upload Files</label>
+<input class="form-control" type="file">
+</div>
+</div>
+</div>
+<div class="submit-section">
+<button class="btn btn-primary submit-btn">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="edit_ticket" class="modal custom-modal fade" role="dialog">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Edit Ticket</h5>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Ticket Subject</label>
+<input class="form-control" type="text" value="Laptop Issue">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Ticket Id</label>
+<input class="form-control" type="text" readonly="" value="TKT-0001">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Assign Staff</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-16-5zjn" tabindex="-1" aria-hidden="true">
+<option>-</option>
+<option selected="" data-select2-id="select2-data-18-zoco">Mike Litorus</option>
+<option>John Smith</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-17-wphc" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-q4yz-container" aria-controls="select2-q4yz-container"><span class="select2-selection__rendered" id="select2-q4yz-container" role="textbox" aria-readonly="true" title="Mike Litorus">Mike Litorus</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Client</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-19-mrzz" tabindex="-1" aria-hidden="true">
+<option>-</option>
+<option>Delta Infotech</option>
+<option selected="" data-select2-id="select2-data-21-488x">International Software Inc</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-20-0bwr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-5bej-container" aria-controls="select2-5bej-container"><span class="select2-selection__rendered" id="select2-5bej-container" role="textbox" aria-readonly="true" title="International Software Inc">International Software Inc</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Priority</label>
+<select class="select select2-hidden-accessible" data-select2-id="select2-data-22-lvdr" tabindex="-1" aria-hidden="true">
+<option>High</option>
+<option selected="" data-select2-id="select2-data-24-ugyx">Medium</option>
+<option>Low</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-23-p93y" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-mv47-container" aria-controls="select2-mv47-container"><span class="select2-selection__rendered" id="select2-mv47-container" role="textbox" aria-readonly="true" title="Medium">Medium</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>CC</label>
+<input class="form-control" type="text">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Assign</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Ticket Assignee</label>
+<div class="project-members">
+<a title="" data-placement="top" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="John Smith">
+<img src="assets/img/profiles/avatar-02.jpg" alt="">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Add Followers</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Ticket Followers</label>
+<div class="project-members">
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="Richard Miles">
+<img src="assets/img/profiles/avatar-09.jpg" alt="">
+</a>
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="John Smith">
+<img src="assets/img/profiles/avatar-10.jpg" alt="">
+</a>
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="Mike Litorus">
+<img src="assets/img/profiles/avatar-05.jpg" alt="">
+</a>
+<a title="" data-bs-toggle="tooltip" href="#" class="avatar" data-bs-original-title="Wilmer Deluna">
+<img src="assets/img/profiles/avatar-11.jpg" alt="">
+</a>
+<span class="all-team">+2</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label>Description</label>
+<textarea class="form-control"></textarea>
+</div>
+<div class="form-group">
+<label>Upload Files</label>
+<input class="form-control" type="file">
+</div>
+</div>
+</div>
+<div class="submit-section">
+<button class="btn btn-primary submit-btn">Save</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal custom-modal fade" id="delete_ticket" role="dialog">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-body">
+<div class="form-header">
+<h3>Delete Ticket</h3>
+<p>Are you sure want to delete?</p>
+</div>
+<div class="modal-btn delete-action">
+<div class="row">
+<div class="col-6">
+<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+</div>
+<div class="col-6">
+<a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+{%endblock%}

@@ -1,0 +1,47 @@
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-layout-mode="orange" data-layout-width="fluid" data-layout-position="fixed" data-layout-style="default"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<meta name="description" content="Smarthr - Bootstrap Admin Template">
+<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+<meta name="author" content="Dreamguys - Bootstrap Admin Template">
+<meta name="robots" content="noindex, nofollow">
+<title>Dashboard - HRMS admin template</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+<link rel="stylesheet" href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}">
+
+<link rel="stylesheet" href="{{url_for('static',filename='assets/css/font-awesome.min.css')}}">
+
+<link rel="stylesheet" href="{{url_for('static',filename='assets/css/style2.css')}}">
+</head>
+<body class="class="account-page"">
+
+{%block content%}
+
+{%endblock%}
+<script>
+var as = document.getElementsByTagName("a");
+for(const a of as){
+	{% if page != None%}
+		a.href = a.href.replace("/{{page}}","");
+	{%else%}
+		console.log(a.href);
+	{%endif%}
+	
+}
+</script>
+<script src="{{url_for('static',filename='assets/js/jquery-3.6.0.min.js')}}"></script>
+
+<script src="{{url_for('static',filename='assets/js/bootstrap.bundle.min.js')}}"></script>
+
+<script src="{{url_for('static',filename='assets/js/jquery.slimscroll.min.js')}}"></script>
+
+
+<script src="{{url_for('static',filename='assets/js/greedynav.js')}}"></script>
+
+<script src="{{url_for('static',filename='assets/js/layout.js')}}"></script>
+
+<script src="{{url_for('static',filename='assets/js/app.js')}}"></script>
+</body>
+</html>

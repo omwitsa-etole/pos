@@ -1,0 +1,622 @@
+{%extends 'index.html'%}
+{%block content%}
+
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row">
+<div class="col">
+<h3 class="page-title">Daily Scheduling</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+<li class="breadcrumb-item"><a href="employees.html">Employees</a></li>
+<li class="breadcrumb-item active">Shift Scheduling</li>
+</ul>
+</div>
+<div class="col-auto float-end ms-auto">
+<a href="shift-list.html" class="btn add-btn m-r-5">Shifts</a>
+<a href="#" class="btn add-btn m-r-5" data-bs-toggle="modal" data-bs-target="#add_schedule"> Assign Shifts</a>
+</div>
+</div>
+</div>
+
+
+
+<div class="row filter-row">
+<div class="col-sm-6 col-md-3">
+<div class="form-group form-focus">
+<input type="text" class="form-control floating">
+<label class="focus-label">Employee</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="form-group form-focus select-focus focused">
+<select class="select floating select2-hidden-accessible" data-select2-id="select2-data-1-nw8b" tabindex="-1" aria-hidden="true">
+<option data-select2-id="select2-data-3-galz">All Department</option>
+<option value="1">Finance</option>
+<option value="2">Finance and Management</option>
+<option value="3">Hr &amp; Finance</option>
+<option value="4">ITech</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-j1mw" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-4884-container" aria-controls="select2-4884-container"><span class="select2-selection__rendered" id="select2-4884-container" role="textbox" aria-readonly="true" title="All Department">All Department</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+<label class="focus-label">Department</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-2">
+<div class="form-group form-focus">
+<div class="cal-icon">
+<input class="form-control floating datetimepicker" type="text">
+</div>
+<label class="focus-label">From</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-2">
+<div class="form-group form-focus">
+<div class="cal-icon">
+<input class="form-control floating datetimepicker" type="text">
+</div>
+<label class="focus-label">To</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-2">
+<a href="#" class="btn btn-success w-100"> Search </a>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="table-responsive">
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped custom-table datatable dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+<thead>
+<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Scheduled Shift: activate to sort column descending" style="width: 253.719px;">Scheduled Shift</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Fri 21: activate to sort column ascending" style="width: 206.25px;">Fri 21</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Sat 22: activate to sort column ascending" style="width: 206.25px;">Sat 22</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Sun 23: activate to sort column ascending" style="width: 206.25px;">Sun 23</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Mon 24: activate to sort column ascending" style="width: 206.25px;">Mon 24</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Tue 25: activate to sort column ascending" style="width: 45.9688px;">Tue 25</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Wed 26: activate to sort column ascending" style="width: 53.4844px;">Wed 26</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Thu 27: activate to sort column ascending" style="width: 206.25px;">Thu 27</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Fri 28: activate to sort column ascending" style="width: 206.25px;">Fri 28</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Sat 29: activate to sort column ascending" style="width: 206.25px;">Sat 29</th></tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+<tr class="odd">
+<td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-13.jpg"></a>
+<a href="profile.html">Bernardo Galaviz <span>Web Developer</span></a>
+</h2>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+</tr><tr class="even">
+<td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-12.jpg"></a>
+<a href="profile.html">Jeffrey Warden <span>Web Developer</span></a>
+</h2>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+ <div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+</tr><tr class="odd">
+<td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
+<a href="profile.html">John Doe <span>Web Designer</span></a>
+</h2>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+ <a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+</tr><tr class="even">
+  <td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-10.jpg"></a>
+<a href="profile.html">John Smith <span>Android Developer</span></a>
+</h2>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+</tr><tr class="odd">
+<td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-05.jpg"></a>
+<a href="profile.html">Mike Litorus <span>IOS Developer</span></a>
+</h2>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+</tr><tr class="even">
+<td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-09.jpg"></a>
+<a href="profile.html">Richard Miles <span>Web Developer</span></a>
+</h2>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+</tr><tr class="odd">
+<td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-11.jpg"></a>
+<a href="profile.html">Wilmer Deluna <span>Team Leader</span></a>
+</h2>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+ </a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<h2>
+<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" style="border:2px dashed #1eb53a">
+<span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
+<span class="userrole-info">Web Designer - SMARTHR</span>
+</a>
+</h2>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+<td>
+<div class="user-add-shedule-list">
+<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+<span><i class="fa fa-plus"></i></span>
+</a>
+</div>
+</td>
+</tr></tbody>
+</table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 7 of 7 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+{%endblock%}

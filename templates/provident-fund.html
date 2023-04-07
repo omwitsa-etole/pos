@@ -1,0 +1,259 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row align-items-center">
+<div class="col">
+<h3 class="page-title">Provident Fund</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+<li class="breadcrumb-item active">Provident Fund</li>
+</ul>
+</div>
+<div class="col-auto float-end ms-auto">
+<a href="#" class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_pf"><i class="fa fa-plus"></i> Add Provident Fund</a>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="table-responsive">
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped custom-table datatable mb-0 dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+<thead>
+<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Employee Name: activate to sort column descending" style="width: 198.516px;">Employee Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Provident Fund Type: activate to sort column ascending" style="width: 176.453px;">Provident Fund Type</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Employee Share: activate to sort column ascending" style="width: 113.672px;">Employee Share</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Organization Share: activate to sort column ascending" style="width: 136.312px;">Organization Share</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 97.5625px;">Status</th><th class="text-end sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 54.125px;">Actions</th></tr>
+</thead>
+<tbody>
+
+<tr class="odd">
+<td class="sorting_1">
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
+<a href="profile.html">John Doe <span>Web Designer</span></a>
+</h2>
+</td>
+<td>Percentage of Basic Salary</td>
+<td>2%</td>
+<td>2%</td>
+<td>
+<div class="dropdown action-label">
+<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-dot-circle-o text-danger"></i> Pending
+</a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Pending</a>
+<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Approved</a>
+</div>
+</div>
+</td>
+<td class="text-end">
+<div class="dropdown dropdown-action">
+<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_pf"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_pf"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+</div>
+</div>
+</td>
+</tr></tbody>
+</table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 1 of 1 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="add_pf" class="modal custom-modal fade" role="dialog">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Add Provident Fund</h5>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Employee Name</label>
+<select class="form-control select select2-hidden-accessible" data-select2-id="select2-data-1-7o2q" tabindex="-1" aria-hidden="true">
+<option value="3" data-select2-id="select2-data-3-ktuo">John Doe (FT-0001)</option>
+<option value="23">Richard Miles (FT-0002)</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-37zm" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-i6ob-container" aria-controls="select2-i6ob-container"><span class="select2-selection__rendered" id="select2-i6ob-container" role="textbox" aria-readonly="true" title="John Doe (FT-0001)">John Doe (FT-0001)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Provident Fund Type</label>
+<select class="form-control select select2-hidden-accessible" data-select2-id="select2-data-4-san1" tabindex="-1" aria-hidden="true">
+<option value="Fixed Amount" selected="" data-select2-id="select2-data-6-ng5b">Fixed Amount</option>
+<option value="Percentage of Basic Salary">Percentage of Basic Salary</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-25zk" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-p2ay-container" aria-controls="select2-p2ay-container"><span class="select2-selection__rendered" id="select2-p2ay-container" role="textbox" aria-readonly="true" title="Fixed Amount">Fixed Amount</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="show-fixed-amount">
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Employee Share (Amount)</label>
+<input class="form-control" type="text">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Organization Share (Amount)</label>
+<input class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="show-basic-salary">
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Employee Share (%)</label>
+<input class="form-control" type="text">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Organization Share (%)</label>
+<input class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+<label>Description</label>
+<textarea class="form-control" rows="4"></textarea>
+</div>
+</div>
+</div>
+<div class="submit-section">
+<button class="btn btn-primary submit-btn">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="edit_pf" class="modal custom-modal fade" role="dialog">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Edit Provident Fund</h5>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label>Employee Name</label>
+<select class="form-control select select2-hidden-accessible" data-select2-id="select2-data-7-g8v7" tabindex="-1" aria-hidden="true">
+<option value="3" data-select2-id="select2-data-9-a14q">John Doe (FT-0001)</option>
+<option value="23">Richard Miles (FT-0002)</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-8-xr4v" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-9wst-container" aria-controls="select2-9wst-container"><span class="select2-selection__rendered" id="select2-9wst-container" role="textbox" aria-readonly="true" title="John Doe (FT-0001)">John Doe (FT-0001)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label>Provident Fund Type</label>
+<select class="form-control select select2-hidden-accessible" data-select2-id="select2-data-10-pob6" tabindex="-1" aria-hidden="true">
+<option value="Fixed Amount" selected="" data-select2-id="select2-data-12-06sq">Fixed Amount</option>
+<option value="Percentage of Basic Salary">Percentage of Basic Salary</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-11-qtl0" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-p3j2-container" aria-controls="select2-p3j2-container"><span class="select2-selection__rendered" id="select2-p3j2-container" role="textbox" aria-readonly="true" title="Fixed Amount">Fixed Amount</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+</div>
+</div>
+<div class="col-md-12">
+<div class="show-fixed-amount">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label>Employee Share (Amount)</label>
+<input class="form-control" type="text">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label>Organization Share (Amount)</label>
+<input class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="show-basic-salary">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label>Employee Share (%)</label>
+<input class="form-control" type="text" value="2%">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label>Organization Share (%)</label>
+<input class="form-control" type="text" value="2%">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="form-group">
+<label>Description</label>
+<textarea class="form-control" rows="4"></textarea>
+</div>
+</div>
+</div>
+<div class="submit-section">
+<button class="btn btn-primary submit-btn">Save</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal custom-modal fade" id="delete_pf" role="dialog">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-body">
+<div class="form-header">
+<h3>Delete Provident Fund</h3>
+<p>Are you sure want to delete?</p>
+</div>
+<div class="modal-btn delete-action">
+<div class="row">
+<div class="col-6">
+<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+</div>
+<div class="col-6">
+<a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{%endblock%}
